@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de examen</title>
+    <style>
+
+      body{
+          background-color: black;
+          overflow: hidden;
+          margin-bottom: 4%;
+          margin-bottom: 4%;
+      }
+      #portaRetrato {
+               width:90vw;
+               height:90vh;
+               background-color: black;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0 auto;
+               
+       }
+             
+
+      
+       @media screen and (orientation:portrait) {
+           #portaRetrato{
+            width: 600px;
+            height: 900px;
+            background-color: black;
+            align-items: center;
+            justify-content: center
+          } 
+    }
+ 
+      
+       @media screen and (orientation:landscape) {
+           #portaRetrato{
+                width: 1200px;
+                height: 800px;
+                background-color: black;
+                align-items: center;
+                justify-content: center;
+              }
+        }
+      
+       
+   </style>
+</head>
+<body>
+ 
+  <picture id="portaRetrato">                                                          
+    <source   media="(orientation: portrait) and (min-height: 900px)" srcset="f1v1200-600.heic" type="image/heic">
+    <source   media="(orientation: portrait) and (min-height: 900px)" srcset="f1v1200-600.webp" type="image/webp">
+    <source   media="(orientation: portrait) and (min-height: 900px)" srcset="f1v1200-600.jpg" type="image/jpg">
+
+    <source   media="(orientation: portrait) and (max-height: 899px)" srcset="f2v600-400.heic" type="image/heic">
+    <source   media="(orientation: portrait) and (max-height: 899px)" srcset="f2v600-400.webp" type="image/webp">
+    <source   media="(orientation: portrait) and (max-height: 899px)" srcset="f2v600-400.jpg" type="image/jpg">
+  
+   
+    <source  media="(orientation: landscape) and (min-width: 1200px)" srcset="f3h1920-1080.heic" type="image/heic">
+    <source  media="(orientation: landscape) and (min-width: 1200px)" srcset="f3h1920-1080.webp" type="image/webp">
+    <source  media="(orientation: landscape) and (min-width: 1200px)" srcset="f3h1920-1080.jpg" type="image/jpg">
+    
+    <source  media="(orientation: landscape) and (max-width: 1199px)" srcset="f4h800-600.heic" type="image/heic">
+    <source  media="(orientation: landscape) and (max-width: 1199px)" srcset="f4h800-600.webp" type="image/webp">
+    <source  media="(orientation: landscape) and (max-width: 1199px)" srcset="f4h800-600.jpg" type="image/jpg">
+
+
+    
+
+    
+    <img id="portaRetrato" alt="Foto por defecto" title="Poder naranja" src="defecto.jpg">
+
+    </picture>
+
+
+</body>
+</html>
